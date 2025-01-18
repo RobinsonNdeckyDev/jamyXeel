@@ -1,10 +1,13 @@
 import { Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 export const routes: Routes = [
   // route l'authentification
-  // { path: 'login', component: LoginComponent },
+  { path: 'login', component:  LoginComponent},
+  { path: 'register', component:  RegisterComponent},
   // route pour la page de déconnexion
   // { path: 'logout', component: LogoutComponent },
   // route pour les pages d'erreurs
@@ -12,7 +15,7 @@ export const routes: Routes = [
   // { path: '500', component: ServerErrorComponent },
 
   // routes pour les pages publiques
-  {path: 'accueil',
+  {path: '',
     component: ClientLayoutComponent,
     loadChildren: () => import('./modules/client/client.module').then(m => m.ClientModule)
   },
