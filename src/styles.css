@@ -2,3 +2,114 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 @import "primeicons/primeicons.css";
+
+/* font google */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Variables root */
+:root{
+    /* couleurs */
+    --primary-color: #0E9CCC;
+    --secondary-color: #3EB0D6;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #ced4da;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --link-color: #0E9CCC;
+}
+
+
+
+/* body */
+body{
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Register et login */
+.bg-card{
+    background-color: #0E9CCC;
+}
+
+.bg-button{
+    background-color: #3EB0D6;
+}
+
+.input-group:focus-within {
+    box-shadow: none;
+}
+
+.input-group .form-control:focus {
+    border-color: #ced4da;
+    box-shadow: none;
+}
+
+.input-group .input-group-text {
+    border-right: none;
+}
+
+.input-group .form-control {
+    border-left: none;
+}
+
+.icon-social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.icon-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+}
+
+.icon-social i{
+    font-size: 1rem;
+}
+
+/* footer-bg */
+.footer-bg{
+    background-color: #0E9CCC;
+}
+
+.footer-icon-bottom a{
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.footer-icon-bottom a i{
+    color: #0E9CCC;
+}
+
+.footer-icon-bottom a:hover{
+    background-color: #0E9CCC;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.footer-icon-bottom a:hover i{
+    color: #fff;
+}

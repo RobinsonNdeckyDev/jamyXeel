@@ -1,1 +1,75 @@
-<p>register works!</p>
+<div class="container-fluid d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div class="row w-100">
+        <div class="col-md-8 mx-auto">
+            <div class="shadow">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card px-4 py-3 bg-card text-white h-100">
+                                <h5 class="card-title text-center fw-bold mb-5 mt-3">Inscrivez-vous</h5>
+                                <form action="">
+                                    <div class="mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="bi bi-person-square"></i></span>
+                                            <input type="text" class="form-control" id="nomComplet" placeholder="Votre nom au complet" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                                            <input type="email" class="form-control" id="email" placeholder="Votre adresse email" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="bi bi-person-fill-lock"></i></span>
+                                            <input type="password" class="form-control" id="password" placeholder="Votre mot de passe" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="bi bi-phone-fill"></i></span>
+                                            <input type="tel" class="form-control" id="telephone" placeholder="Votre numéro de téléphone" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center my-4">
+                                        <button type="submit" class="btn bg-button fw-bold px-5 text-white">S'inscrire</button>
+                                    </div>
+
+                                    <p class="text-center my-3">
+                                        <a routerLink="/login" class="nav-link fw-bold">
+                                            Se connecter
+                                        </a>
+                                    </p>
+
+                                    <div class="d-flex justify-content-center align-items-center my-3">
+                                        <span class="me-3 p-2 icon-social">
+                                            <a href="">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                        </span>
+                                        <span class="me-3 p-2 icon-social">
+                                            <a href="">
+                                                <i class="bi bi-google"></i>
+                                            </a>
+                                        </span>
+                                        <span class="me-3 p-2 icon-social">
+                                            <a href="">
+                                                <i class="bi bi-linkedin"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="assets/register-img.jpg" alt="" class="img-fluid">
+                            <img src="assets/logo/jamixel-logo.png" alt="" class="img-fluid w-25 mx-auto d-block mb-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
