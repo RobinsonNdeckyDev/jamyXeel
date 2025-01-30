@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'therapeutes', component: ListeTherapeutesComponent},
   { path: 'Blog', component: ListeBlogComponent},
   { path: 'detailTherapeute', component: DetailsTherapeuteComponent},
-  { path: 'detailBlog', component: DetailsBlogComponent},
+  { path: 'detailBlog/:id', component: DetailsBlogComponent},
   { path: 'contact', component: ContactComponent}
 ];
 

@@ -3,6 +3,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import {DetailsBlogComponent} from "./modules/client/details-blog/details-blog.component";
 
 export const routes: Routes = [
   // route l'authentification
@@ -29,5 +30,5 @@ export const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   // Route pour les pages non trouvées
   { path: '**', component: NotFoundComponent },
-  { path: '**', redirectTo: 'accueil' }
+  { path: '**', redirectTo: 'accueil' },
 ];

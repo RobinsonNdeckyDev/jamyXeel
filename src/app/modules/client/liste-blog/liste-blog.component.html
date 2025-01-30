@@ -1,1 +1,25 @@
-<p>liste-blog works!</p>
+<header class="p-5 bg-success">
+    <div class="d-flex justify-content-center align-content-center gap-4">
+        <div class="d-flex gap-2">
+            <input type="search" id="recherche" name="recherche" placeholder="Rechercher blog" class="form-control">
+            <button (click)="Rechercher()" class="btn btn-primary">Rechercher</button>
+        </div>
+    </div>
+</header>
+<!-- section pour article -->
+<section class="py-5">
+    <article class="container row rounded mx-auto">
+        @for (blog of blogs; track blog.id){
+            <div class="d-grid col col-4 shadow-sm">
+                <img [src]="blog.image" [alt]="blog.titre" class="w-100 rounded">
+                <div class="py-2">
+                    <h4>{{blog.titre}}</h4>
+                   <!-- <p>{{blog.desc}}</p> -->
+                    <button [routerLink]="['/detailBlog', blog.id]" (click)="afficherDetailBlog(blog.id)" class="btn btn-primary btn-sm">
+                        Lire blog
+                    </button>
+                </div>
+            </div>
+        }
+    </article>
+</section>

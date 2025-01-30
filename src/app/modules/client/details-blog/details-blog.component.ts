@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ListeBlogComponent} from "../liste-blog/liste-blog.component";
 
 @Component({
   selector: 'app-details-blog',
