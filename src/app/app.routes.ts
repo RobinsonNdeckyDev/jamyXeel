@@ -3,11 +3,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 
 export const routes: Routes = [
   // route l'authentification
   { path: 'login', component:  LoginComponent},
   { path: 'register', component:  RegisterComponent},
+  { path: 'forgot-password', component:  ForgotPasswordComponent},
   // route pour la page de déconnexion
   // { path: 'logout', component: LogoutComponent },
   // route pour les pages d'erreurs
