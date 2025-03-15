@@ -1,0 +1,7 @@
+/* image de fond pour le composant blog */
+blog-header{
+    background-image: url("/assets/banners/img1-accueil.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

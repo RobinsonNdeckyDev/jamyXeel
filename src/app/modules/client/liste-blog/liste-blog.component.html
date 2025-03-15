@@ -1,25 +1,25 @@
-<header class="p-5 bg-success">
-    <div class="d-flex justify-content-center align-content-center gap-4">
-        <div class="d-flex gap-2">
-            <input type="search" id="recherche" name="recherche" placeholder="Rechercher blog" class="form-control">
-            <button (click)="Rechercher()" class="btn btn-primary">Rechercher</button>
-        </div>
-    </div>
+<header class="p-5 blog-header">
+
 </header>
 <!-- section pour article -->
 <section class="py-5">
     <article class="container row rounded mx-auto">
-        @for (blog of blogs; track blog.id){
-            <div class="d-grid col col-4 shadow-sm">
-                <img [src]="blog.image" [alt]="blog.titre" class="w-100 rounded">
-                <div class="py-2">
-                    <h4>{{blog.titre}}</h4>
-                   <!-- <p>{{blog.desc}}</p> -->
-                    <button [routerLink]="['/detailBlog', blog.id]" (click)="afficherDetailBlog(blog.id)" class="btn btn-primary btn-sm">
-                        Lire blog
-                    </button>
-                </div>
-            </div>
-        }
+        <div class="col col-2">
+            <input type="search" class="form-control" placeholder="Rechercher article" (search)="onSearche()">
+        </div>
+        <div class="blog-list col col-10">
+           <div class="row">
+               <div *ngFor="let blog of blogs" class="blog-item col-md-4 shadow-sm">
+                   <img [src]="blog.image" [alt]="blog.title" class="w-100 gap-5">
+                   <div class="p-3">
+                       <h5>{{ blog.title }}</h5>
+                       <p>{{ blog.date | date }}</p>
+                       <button [routerLink]="['/detailBlog', blog.id]" (click)="getDetails(blog)" class="btn btn-primary btn-sm">
+                           Lire Blog
+                       </button>
+                   </div>
+               </div>
+           </div>
+          </div>
     </article>
 </section>
