@@ -14,8 +14,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: 'therapeutes', component: ListeTherapeutesComponent},
   { path: 'Blog', component: ListeBlogComponent},
-  { path: 'detailTherapeute', component: DetailsTherapeuteComponent},
-  { path: 'detailBlog/:id', component: DetailsBlogComponent},
+  { path: 'detailTherapeute/:id', component: DetailsTherapeuteComponent},
+  { path: 'detailBlog', component: DetailsBlogComponent},
   { path: 'contact', component: ContactComponent}
 ];
 

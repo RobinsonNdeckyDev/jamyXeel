@@ -1,1 +1,156 @@
-<p>details-therapeute works!</p>
+<div class="container">
+    <div class="row py-5">
+        <!-- Sidebar -->
+        <div class="col-md-6 bg-light">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="card-title mb-0">Tâches principales</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Examiner les clients, évaluer leurs comportements et
+                            diagnostiquer les troubles comportementaux, émotifs
+                            et cognitifs.
+                        </li>
+                        <li class="list-group-item">
+                            Déterminer et mettre en application les
+                            interventions ou les traitements susceptibles
+                            d'aider les personnes.
+                        </li>
+                        <li class="list-group-item">
+                            Aider les personnes à gérer une difficulté, à se
+                            développer ou à s'adapter sur les plans personnel,
+                            social et professionnel.
+                        </li>
+                        <li class="list-group-item">
+                            Offrir des services de médiation.
+                        </li>
+                        <li class="list-group-item">
+                            Faire passer des tests psychologiques standardisés
+                            pour évaluer des fonctions cognitives comme
+                            l'attention et la mémoire.
+                        </li>
+                        <li class="list-group-item">
+                            Élaborer et évaluer des programmes d'intervention.
+                        </li>
+                        <li class="list-group-item">
+                            Recommander la consultation d'un(e) médecin si les
+                            clients ont besoin de médicaments.
+                        </li>
+                        <li class="list-group-item">
+                            Effectuer des recherches et publier des textes
+                            éducatifs et des articles.
+                        </li>
+                        <li class="list-group-item">
+                            Donner des conférences et des ateliers.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mx-auto">
+            <div class="card shadow-lg">
+                <img
+                    [src]="therapeute?.image"
+                    class="card-img-top"
+                    style="width: auto; height: 400px"
+                    alt="Image du thérapeute"
+                />
+                <div class="card-body">
+                    <h3 class="card-title">{{ therapeute?.nom }}</h3>
+                    <p class="card-text">{{ therapeute?.description }}</p>
+                    <p class="text-muted">
+                        Disponible :
+                        <strong>{{ therapeute?.disponibilite }}</strong>
+                    </p>
+                    <div
+                        class="d-flex justify-content-between align-items-center"
+                    >
+                        <div>
+                            <i
+                                *ngFor="
+                                    let star of getStarsArray(therapeute?.note);
+                                    let i = index
+                                "
+                                class="bi"
+                                [ngClass]="
+                                    star
+                                        ? 'bi-star-fill text-warning'
+                                        : 'bi-star text-secondary'
+                                "
+                            >
+                            </i>
+                        </div>
+                        <a
+                            href="#prendre-rdv"
+                            class="btn btn-primary mt-3"
+                            data-bs-toggle="modal"
+                            data-bs-target="#prendre-rdv"
+                        >
+                            Prendre un rendez-vous
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div
+    class="modal fade"
+    id="prendre-rdv"
+    tabindex="-1"
+    aria-labelledby="prendreRdvLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="prendreRdvLabel">
+                    Prendre un rendez-vous
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom complet</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="nom"
+                            placeholder="Entrez votre nom"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label"
+                            >Adresse e-mail</label
+                        >
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="Entrez votre e-mail"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label"
+                            >Date de rendez-vous</label
+                        >
+                        <input type="date" class="form-control" id="date" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Envoyer
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
